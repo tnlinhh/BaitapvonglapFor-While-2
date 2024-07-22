@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi mẹ đẻ lãi con</title>
+</head>
+<body>
+    <script>
+        // Hàm tính lãi suất kép
+        function calculateCompoundInterest(tienBanDau, thang, laiThang) {
+            let tongTien = tienBanDau * Math.pow((1 + laiThang), thang);
+            return tongTien;
+        }
+        // Số tiền ban đầu
+        let tienBanDau = 5000000; // Ví dụ: 5,000,000 VND
+
+        // Số tháng cho vay
+        let thang = 6; // Ví dụ: 6 tháng
+
+        // Lãi suất hàng tháng
+        let laiThang = 0.02; // Ví dụ: 2% mỗi tháng
+
+        // Tính tổng số tiền sau khi tính lãi suất kép
+        let tongTien = calculateCompoundInterest(tienBanDau, thang, laiThang);
+
+        // In ra kết quả
+        console.log("Số tiền ban đầu: " + tienBanDau + " VND");
+        console.log("Số tháng cho vay: " + thang);
+        console.log("Lãi suất hàng tháng: " + (laiThang * 100) + "%");
+        console.log("Tổng số tiền sau " + thang + " tháng: " + tongTien.toFixed(2) + " VND");
+    </script>
+</body>
+</html>

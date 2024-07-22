@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In hình trái tim</title>
+</head>
+<body>
+    <script>
+        function printHeart() {
+            let size = 6; // Kích thước của trái tim
+            let heart = '';
+
+            // Phần trên của trái tim
+            for (let i = size / 2; i <= size; i += 2) {
+                for (let j = 1; j < size - i; j += 2) {
+                    heart += ' ';
+                }
+                for (let j = 1; j <= i; j++) {
+                    heart += '*';
+                }
+                for (let j = 1; j <= size - i; j++) {
+                    heart += ' ';
+                }
+                for (let j = 1; j <= i; j++) {
+                    heart += '*';
+                }
+                heart += '\n';
+            }
+            // Phần dưới của trái tim
+            for (let i = size; i >= 1; i--) {
+                for (let j = i; j < size; j++) {
+                    heart += ' ';
+                }
+                for (let j = 1; j <= (i * 2) - 1; j++) {
+                    heart += '*';
+                }
+                heart += '\n';
+            }
+            console.log(heart);
+        }
+        printHeart();
+    </script>
+</body>
+</html>

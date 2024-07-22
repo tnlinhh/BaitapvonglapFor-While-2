@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập một số nguyên:"));
+        if (isNaN(n) || n < 1) {
+            console.log("Vui lòng nhập một số nguyên dương hợp lệ.");
+        } else {
+            let S = 0;
+            for (let i = 1; i <= n; i++) {
+                S += 1 / Math.pow(i, 3); // Tích  lũy thừa bậc 3 của i
+            }
+            console.log(`Giá trị của biểu thức S là: ${S}`);
+        }
+    </script>
+</body>
+</html>

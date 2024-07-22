@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+
+<body>
+    <script>
+        //Tam giác vuông góc tại bên trái (dưới cùng)
+
+        let n = 5; // Chiều cao của tam giác
+        for (let i = 1; i <= n; i++) {
+            let line = '';
+            for (let j = 1; j <= i; j++) {
+                line += '*';
+            }
+            console.log(line);
+        }
+        //Tam giác vuông góc tại bên phải (dưới cùng)
+
+        let n = 5; // Chiều cao của tam giác
+        let i = 1;
+        while (i <= n) {
+            let line = '';
+            let j = 1;
+            while (j <= n - i) {
+                line += ' ';
+                j++;
+            }
+            j = 1;
+            while (j <= i) {
+                line += '*';
+                j++;
+            }
+            console.log(line);
+            i++;
+        }
+        // Tam giác vuông góc tại bên trái (trên cùng)
+
+        let n = 5; // Chiều cao của tam giác
+        let i = n;
+        do {
+            let line = '';
+            let j = 1;
+            while (j <= i) {
+                line += '*';
+                j++;
+            }
+            console.log(line);
+            i--;
+        } while (i > 0);
+
+        //Tam giác vuông góc tại bên phải (trên cùng)
+
+        let n = 5; // Chiều cao của tam giác
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                if (j < n - i - 1) {
+                    process.stdout.write(' ');
+                } else {
+                    process.stdout.write('*');
+                }
+            }
+            console.log();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số nguyên dương a:"));
+        let b = parseInt(prompt("Nhập số nguyên dương b:"));
+
+        if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) {
+            console.log("Nhập hai số nguyên dương hợp lệ.");
+        } else if (a >= b) {
+            console.log("Số a phải nhỏ hơn số b.");
+        } else {
+            let sumLe = 0;
+            let sumChan = 0;
+            // Xác định số bắt đầu và kết thúc để lặp
+            for (let i = a + 1; i < b; i++) {
+                if (i % 2 === 0) {
+                    sumChan += i; // Nếu là số chẵn
+                } else {
+                    sumLe += i; // Nếu là số lẻ
+                }
+            }
+            console.log(`Tổng số lẻ là ${sumLe} và Tổng số chẵn là ${sumChan}`);
+        }
+    </script>
+</body>
+</html>

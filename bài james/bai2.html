@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính giai thừa của một số nguyên dương</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số nguyên dương:"));
+        if (isNaN(n) || n < 0) {
+            console.log("Vui lòng nhập một số nguyên dương hợp lệ.");
+        } else {
+            let factorial = 1;
+            let i = 1;
+            // Tính giai thừa bằng vòng lặp while
+            while (i <= n) {
+                factorial *= i;
+                i++;
+            }
+            console.log(`Giai thừa của ${n} là: ${factorial}`);
+        }
+    </script>
+</body>
+</html>

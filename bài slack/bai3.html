@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập một số nguyên:"));
+        if (isNaN(n) || n < 0) {
+            console.log("Vui lòng nhập một số nguyên không âm hợp lệ.");
+        } else {
+            let fib1 = 0, fib2 = 1;
+            let fibonacci = [];
+            // In các phần tử đầu tiên của dãy Fibonacci từ 0 đến n
+            while (fib1 <= n) {
+                fibonacci.push(fib1);
+                let nextFib = fib1 + fib2;
+                fib1 = fib2;
+                fib2 = nextFib;
+            }
+            console.log(`Các phần tử đầu tiên của dãy Fibonacci từ 0 đến ${n} là:`);
+            console.log(fibonacci.join(' ')); // join (' ') để nối các phần tử thành 1 chuỗi cách bằng khoảng trắng
+        }
+    </script>
+</body>
+</html>
